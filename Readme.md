@@ -6,9 +6,11 @@
 
     Utilize a senha "123456";
 
+
 - Na pasta frontend instale as dependências do projeto com o comando `npm install`;
 
     Após o término do download das dependências, podem existir mensagens `WARN`, mas não se assuste. Aguarde o término da instalação, o que pode demorar um pouco.
+
 
 - Enquanto as dependências estão sendo instaladas, entre no site do Bootstrap e faça o download do framework. Então, adicione os arquivos em pastas organizadas dentro do projeto;
 
