@@ -14,36 +14,42 @@ Queremos desenvolver uma pequena aplicação web que nos permita encomendar pizz
 
 |Como cliente, eu gostaria de visualizar os sabores de pizzas disponíveis para selecionar o que eu desejar (1,0 ponto)|
 |-|
-|Os sabores das pizzas devem estar listados em ordem alfabética.|
+|- Os sabores das pizzas devem estar listados em ordem alfabética.|
 
-|Como cliente, eu gostaria de selecionar os ingredientes, o tipo de massa e o tamanho da pizza para me permitir customizá-la da forma como eu quiser (2,0 pontos)|
+|Como cliente, eu gostaria de selecionar os ingredientes, o tipo de massa e o tamanho da pizza para me permitir customizá-la da forma como eu quiser (2,0 pontos) |
 |-|
-|1. A montagem da pizza deve seguir o seguinte fluxo: seleção dos ingredientes, borda recheada e tamanho da pizza|
-|2. Os ingredientes devem ser listados em ordem alfabética;|
-|3. Deve haver os seguintes tipos de borda: catupiry ou cheddar;|
-|4. Deve haver os seguintes tamanhos: pequena, média ou grande.|
+|- A montagem da pizza deve seguir o seguinte fluxo: seleção dos ingredientes, borda recheada e tamanho da pizza;|
+|- Os ingredientes devem ser listados em ordem alfabética;|
+|- Deve haver os seguintes tipos de borda: catupiry ou cheddar;|
+|- Deve haver os seguintes tamanhos: pequena, média ou grande.|
 
-|Como cliente, eu gostaria de visualizar o preço final do meu pedido de acordo com o sabor e o tamanho selecionados ou com os ingredientes e o tamanho selecionados (3,0 pontos)|
+| Como cliente, eu gostaria de visualizar o preço final do meu pedido de acordo com o sabor e o tamanho selecionados ou com os ingredientes e o tamanho selecionados (3,0 pontos) |
 |-|
-O preço final deve ser calculado de acordo com a seguinte fórmula: [Σ (preço dos ingredientes) * TP + BR + TE] * DE, em que: 
-* TP é o tamanho da pizza e possui os seguintes valores:
+|- O preço final deve ser calculado de acordo com a seguinte fórmula: [Σ (preço dos ingredientes) * TP + BR + TE] * DE, em que: 
+
+ 1. TP é o tamanho da pizza e possui os seguintes valores:
+
     * Pizza pequena = 1;
     * Pizza média = 1,2;
     * Pizza grande = 1.5.
-* BR é a borda recheada e possui os seguintes valores:
+ 2.  BR é a borda recheada e possui os seguintes valores:
+
     * Catupiry = R$5,00;
     * Cheddar = R$7,00;
     * Chocolate = R$6,00
-* TE é a taxa de entrega e possui o valor de R$10,00;
-* DE é o desconto por atraso e possui os seguintes valores:
+ 3.  TE é a taxa de entrega e possui o valor de R$10,00;
+ 4. DE é o desconto por atraso e possui os seguintes valores:
+
     * 1 para tempos de entrega menor ou igual a 40 minutos;
     * 0,90 para tempos de entrega maior do que 40 minutos.
+ 	
 
 |Como cliente, eu gostaria de finalizar o meu pedido e ser imediatamente informado sobre o tempo previsto de entrega (2,0 pontos)|
 |-|
-1. Deve haver um action to call para finalizar o pedido;
-    * O tempo previsto de entrega deve ser um número aleatório entre 20 e 60 minutos;
-    * Caso o tempo de entrega seja maior do que 40 minutos, um desconto de 10% deve ser aplicado ao preço final.
+|- Deve haver um action to call para finalizar o pedido    
+* O tempo previsto de entrega deve ser um número aleatório entre 20 e 60 minutos;
+* Caso o tempo de entrega seja maior do que 40 minutos, um desconto de 10% deve ser aplicado ao preço final.
+
     
 ## REQUISITOS NÃO-FUNCIONAIS
 1. A aplicação deve ser Single Page Application (SPA) e JS-based utilizando AngularJS 1 e Bootstrap;
@@ -52,7 +58,7 @@ O preço final deve ser calculado de acordo com a seguinte fórmula: [Σ (preço
     * O projeto inicial pode ser baixado em <link do repositório>;
     * Antes de iniciar, crie uma topic branch obedecendo seguinte padrão: <seu_nome_e_sobrenome>;
     * Procure realizar commits logicamente relacionados, pois eles serão avaliados (1,0 ponto).
-4. Os dados estarão disponíveis em: <webservice>;
+4. Os dados estarão disponíveis em: [link](ssh://git@bitbucket.tecnomobile.com.br:7999/adc/frontend.git);
 5. Utilize Jasmine ou Protractor para executar os testes automatizados de acordo com a necessidade;
 6. Foque seu desenvolvimento na versão do Chrome instalada.
 
@@ -110,7 +116,7 @@ O preço final deve ser calculado de acordo com a seguinte fórmula: [Σ (preço
 |18|  Açúcar  |R$0,50|
 
 | # | Sabores | Ingredientes |
-| - | ------------ | ----- |
+| - | ------- | ------------ |
 |1| Calabresa |Queijo mussarela, calabresa e cebola|
 |2| Lombo canadense com abacaxi |Queijo mussarela, lombo canadense e abacaxi|
 |3| Portuguesa  |Queijo mussarela, calabresa, cebola, pimentão, ovo|
@@ -122,13 +128,13 @@ O preço final deve ser calculado de acordo com a seguinte fórmula: [Σ (preço
 |9| Presunto  |Queijo mussarela e presunto|
 
 | # | Tamanho | Peso |
-| - | ------------ | ----- |
+| - | ------- | ---- |
 |1|Pequena|1|
 |2|Média|2|
 |3|Grande|3|
 
 | # | Borda | Valor |
-| - | ------------ | ----- |
+| - | ----- | ----- |
 |1|Catupiry|R$5,00|
 |2|Cheddar|R$7,00|
 |3|Chocolate|R$6,00|
