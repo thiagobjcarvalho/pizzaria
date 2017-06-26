@@ -96,24 +96,24 @@ Queremos desenvolver uma pequena aplicação web que nos permita encomendar pizz
 ### TABELAS
  # | Ingredientes | Preço 
  - | ------------ | ----- 
-1| Queijo mussarela |  R$5,00
-2| Queijo cheddar  |R$7,00
-3| Calabresa |R$5,00
-4| Pepperoni |R$7,00
-5| Atum  |R$6,00
-6| Banana  |R$2,00
-7| Calda de chocolate  |R$4,00
-8| Milho |R$2,00
-9| Ervilha |R$2,50
-10|  Palmito |R$5,00
-11|  Presunto  |R$3,00
-12|  Cebola  |R$1,00
-13|  Pimentão  |R$1,50
-14|  Ovo |R$1,50
-15|  Lombo canadense |R$8,50
-16|  Abacaxi |R$2,50
-17|  Canela  |R$0,50
-18|  Açúcar  |R$0,50
+1 | Queijo mussarela | R$5,00
+2 | Queijo cheddar | R$7,00
+3 | Calabresa | R$5,00
+4 | Pepperoni | R$7,00
+5 | Atum  | R$6,00
+6 | Banana | R$2,00
+7 | Calda de chocolate | R$4,00
+8 | Milho | R$2,00
+9 | Ervilha | R$2,50
+10 | Palmito | R$5,00
+11 | Presunto | R$3,00
+12 | Cebola | R$1,00
+13 | Pimentão  | R$1,50
+14 | Ovo | R$1,50
+15 | Lombo canadense | R$8,50
+16 | Abacaxi | R$2,50
+17 | Canela | R$0,50
+18 | Açúcar | R$0,50
 
  # | Sabores | Ingredientes 
  - | ------- | ------------ 
