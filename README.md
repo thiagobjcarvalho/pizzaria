@@ -94,7 +94,7 @@ Queremos desenvolver uma pequena aplicação web que nos permita encomendar pizz
     ]
 
 ### TABELAS
- # | Ingredientes | Preço 
+ id | Ingredientes | Preço 
  - | ------------ | ----- 
 1 | Queijo mussarela | R$5,00
 2 | Queijo cheddar | R$7,00
@@ -115,7 +115,7 @@ Queremos desenvolver uma pequena aplicação web que nos permita encomendar pizz
 17 | Canela | R$0,50
 18 | Açúcar | R$0,50
 
- # | Sabores | Ingredientes 
+ id | Sabores | Ingredientes 
  - | ------- | ------------ 
 1| Calabresa |Queijo mussarela, calabresa e cebola
 2| Lombo canadense com abacaxi |Queijo mussarela, lombo canadense e abacaxi
@@ -127,13 +127,13 @@ Queremos desenvolver uma pequena aplicação web que nos permita encomendar pizz
 8| Pepperoni |Queijo mussarela e pepperoni
 9| Presunto  |Queijo mussarela e presunto
 
- # | Tamanho | Peso 
+ id | Tamanho | Peso 
  - | ------- | ---- 
 1|Pequena|1
 2|Média|2
 3|Grande|3
 
- # | Borda | Valor 
+ id | Borda | Valor 
  - | ----- | ----- 
 1|Catupiry|R$5,00
 2|Cheddar|R$7,00
