@@ -136,13 +136,10 @@
             Exemplos do retorno das rotas:
             <ul>
                <li>Ingredientes<br>[<br>{"id": 1,"ingrediente": "Queijo mussarela","preco": 5},<br>{"id": 2,"ingrediente": "Queijo cheddar","preco": 7}<br>]</li>
-               <li>
-                  Sabores<br>[<br>{"id": 6,"sabor": "Milho","ingredientes": [
-                  <pre><code>    {"id": 1,"ingrediente": "Queijo mussarela","preco": 5},
-    {"id": 8,"ingrediente": "Milho","preco": 2}
-]
-</code></pre>
-                  }]
+               <li>Sabores<br>[<br>{"id": 6,"sabor": "Milho","ingredientes": [<br>
+                {"id": 1,"ingrediente": "Queijo mussarela","preco": 5},<br>
+                {"id": 8,"ingrediente": "Milho","preco": 2}]<br>
+                }]
                <li>Bordas<br>[<br>{"id": 1,"borda": "Catupiry","valor": 5}<br>]</li>
                </li>
                <li>Tamanhos<br>[<br>{"id": 1,"tamanho": "Pequena","peso": 1}<br>]</li>
