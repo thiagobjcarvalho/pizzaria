@@ -94,47 +94,47 @@ Queremos desenvolver uma pequena aplicação web que nos permita encomendar pizz
     ]
 
 ### TABELAS
- id | Ingredientes | Preço 
- - | ------------ | ----- 
-1 | Queijo mussarela | R$5,00
-2 | Queijo cheddar | R$7,00
-3 | Calabresa | R$5,00
-4 | Pepperoni | R$7,00
-5 | Atum  | R$6,00
-6 | Banana | R$2,00
-7 | Calda de chocolate | R$4,00
-8 | Milho | R$2,00
-9 | Ervilha | R$2,50
-10 | Palmito | R$5,00
-11 | Presunto | R$3,00
-12 | Cebola | R$1,00
-13 | Pimentão  | R$1,50
-14 | Ovo | R$1,50
-15 | Lombo canadense | R$8,50
-16 | Abacaxi | R$2,50
-17 | Canela | R$0,50
-18 | Açúcar | R$0,50
+| id | Ingredientes | Preço 
+| - | ------------ | ----- 
+| 1 | Queijo mussarela | R$5,00
+| 2 | Queijo cheddar | R$7,00
+| 3 | Calabresa | R$5,00
+| 4 | Pepperoni | R$7,00
+| 5 | Atum  | R$6,00
+| 6 | Banana | R$2,00
+| 7 | Calda de chocolate | R$4,00
+| 8 | Milho | R$2,00
+| 9 | Ervilha | R$2,50
+| 10 | Palmito | R$5,00
+| 11 | Presunto | R$3,00
+| 12 | Cebola | R$1,00
+| 13 | Pimentão  | R$1,50
+| 14 | Ovo | R$1,50
+| 15 | Lombo canadense | R$8,50
+| 16 | Abacaxi | R$2,50
+| 17 | Canela | R$0,50
+| 18 | Açúcar | R$0,50
 
- id | Sabores | Ingredientes 
- - | ------- | ------------ 
-1| Calabresa |Queijo mussarela, calabresa e cebola
-2| Lombo canadense com abacaxi |Queijo mussarela, lombo canadense e abacaxi
-3| Portuguesa  |Queijo mussarela, calabresa, cebola, pimentão, ovo
-4| Palmito |Queijo mussarela e palmito
-5| Banana  |Queijo mussarela, banana, canela e açúcar
-6| Milho |Queijo mussarela e milho
-7| Atum  |Queijo mussarela e atum
-8| Pepperoni |Queijo mussarela e pepperoni
-9| Presunto  |Queijo mussarela e presunto
+| id | Sabores | Ingredientes 
+| - | ------- | ------------ 
+| 1 | Calabresa | Queijo mussarela, calabresa e cebola
+| 2 | Lombo canadense com abacaxi | Queijo mussarela, lombo canadense e abacaxi
+| 3 | Portuguesa  | Queijo mussarela, calabresa, cebola, pimentão, ovo
+| 4 | Palmito | Queijo mussarela e palmito
+| 5 | Banana  | Queijo mussarela, banana, canela e açúcar
+| 6 | Milho | Queijo mussarela e milho
+| 7 | Atum  | Queijo mussarela e atum
+| 8 | Pepperoni | Queijo mussarela e pepperoni
+| 9 | Presunto  | Queijo mussarela e presunto
 
- id | Tamanho | Peso 
- - | ------- | ---- 
-1|Pequena|1
-2|Média|2
-3|Grande|3
+| id | Tamanho | Peso 
+| - | ------- | ---- 
+| 1 | Pequena |1
+| 2 | Média |2
+| 3 | Grande |3
 
- id | Borda | Valor 
- - | ----- | ----- 
-1|Catupiry|R$5,00
-2|Cheddar|R$7,00
-3|Chocolate|R$6,00
+| id | Borda | Valor 
+| - | ----- | ----- 
+| 1 | Catupiry | R$5,00
+| 2 | Cheddar | R$7,00
+| 3 | Chocolate | R$6,00
