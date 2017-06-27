@@ -73,7 +73,6 @@
          <li>Caso o tempo de entrega seja maior do que 40 minutos, um desconto de 10% deve ser aplicado ao preço final.</li>
         </ul>
       </blockquote>
-      
       <h2 id="requisitos-nao-funcionais">Requisitos não-funcionais</h2>
       <ol>
          <li>A aplicação deve ser <i>Single Page Application (SPA)</i> e <i>JS-based</i> utilizando <a href="#">AngularJS 1</a> e <a href="#">Bootstrap</a>;</li>
@@ -98,7 +97,6 @@
          <li>[GET]/tamanhos - Retorna todos os tamanhos.</li>
          <li>[GET]/tamanho - Retorna um tamanho passando seu identificador.</li>
       </ul>
-      
       <h2 id="exemplos-dos-retornos">Exemplos dos retornos</h2>
       <ul>
          <li>Ingredientes<br>[<br>{"id": 1,"ingrediente": "Queijo mussarela","preco": 5},<br>{"id": 2,"ingrediente": "Queijo cheddar","preco": 7}<br>]</li>
@@ -110,7 +108,6 @@
          </li>
          <li>Tamanhos<br>[<br>{"id": 1,"tamanho": "Pequena","peso": 1}<br>]</li>
       </ul>
-      
       <h2 id="tabelas">Tabelas</h2>
       <table>
          <thead>
@@ -213,7 +210,6 @@
             </tr>
          </tbody>
       </table>
-      
       <table>
          <thead>
             <tr>
@@ -270,7 +266,6 @@
             </tr>
          </tbody>
       </table>
-      
       <table>
          <thead>
             <tr>
@@ -297,7 +292,6 @@
             </tr>
          </tbody>
       </table>
-      
       <table>
          <thead>
             <tr>
