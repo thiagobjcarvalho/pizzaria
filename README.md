@@ -59,35 +59,39 @@
          <tbody>
             <tr>
                <td>- O preço final deve ser calculado de acordo com a seguinte fórmula: [Σ (preço dos ingredientes) <em> TP + BR + TE] </em> DE, em que: </td>
+            </tr>         
+            <tr>
+               <td>
+                  <ol>
+                     <li>
+                        <p>TP é o tamanho da pizza e possui os seguintes valores:</p>
+                        <ul>
+                           <li>Pizza pequena = 1;</li>
+                           <li>Pizza média = 1,2;</li>
+                           <li>Pizza grande = 1.5.</li>
+                        </ul>
+                     </li>
+                     <li>
+                        <p>BR é a borda recheada e possui os seguintes valores:</p>
+                        <ul>
+                           <li>Catupiry = R$5,00;</li>
+                           <li>Cheddar = R$7,00;</li>
+                           <li>Chocolate = R$6,00</li>
+                        </ul>
+                     </li>
+                     <li>TE é a taxa de entrega e possui o valor de R$10,00;</li>
+                     <li>
+                        <p>DE é o desconto por atraso e possui os seguintes valores:</p>
+                        <ul>
+                           <li>1 para tempos de entrega menor ou igual a 40 minutos;</li>
+                           <li>0,90 para tempos de entrega maior do que 40 minutos.</li>
+                        </ul>
+                     </li>
+                  </ol>
+                </td>
             </tr>
-         </tbody>
+        </tbody>
       </table>
-      <ol>
-         <li>
-            <p>TP é o tamanho da pizza e possui os seguintes valores:</p>
-            <ul>
-               <li>Pizza pequena = 1;</li>
-               <li>Pizza média = 1,2;</li>
-               <li>Pizza grande = 1.5.</li>
-            </ul>
-         </li>
-         <li>
-            <p>BR é a borda recheada e possui os seguintes valores:</p>
-            <ul>
-               <li>Catupiry = R$5,00;</li>
-               <li>Cheddar = R$7,00;</li>
-               <li>Chocolate = R$6,00</li>
-            </ul>
-         </li>
-         <li>TE é a taxa de entrega e possui o valor de R$10,00;</li>
-         <li>
-            <p>DE é o desconto por atraso e possui os seguintes valores:</p>
-            <ul>
-               <li>1 para tempos de entrega menor ou igual a 40 minutos;</li>
-               <li>0,90 para tempos de entrega maior do que 40 minutos.</li>
-            </ul>
-         </li>
-      </ol>
       <table>
          <thead>
             <tr>
