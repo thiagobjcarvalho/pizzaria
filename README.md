@@ -4,7 +4,6 @@
    </head>
    <body>
       <h1 id="teste-para-candidato-front-end">Teste para candidato Front-end</h1>
-      <p>Como desenvolvedor, eu gostaria de desenvolver um teste para avaliar candidatos front-end.</p>
       <h2 id="descri-o-do-projeto">Descrição do projeto</h2>
       <p>Queremos desenvolver uma pequena aplicação web que nos permita encomendar pizzas.</p>
       <h2 id="objetivos">OBJETIVOS</h2>
