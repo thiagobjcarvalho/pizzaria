@@ -141,7 +141,7 @@
    }
 ]
           </pre>
-         <li>[GET]/borda/{id} - Retorna uma borda passando seu identificador</li>
+         <li>[GET]/borda/{id} - Retorna uma borda passando seu identificador.</li>
          <li>[GET]/tamanhos - Retorna todos os tamanhos.
           <pre>
 [
@@ -152,6 +152,8 @@
    }
 ]
           </pre>
+         </li>
+         <li>[GET]/tamanho - Retorna um tamanho passando seu identificador.</li>
       </ul>
       
       <h2 id="tabelas">Tabelas</h2>
