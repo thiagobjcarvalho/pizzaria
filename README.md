@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -18,11 +19,11 @@
             <li>Você domina seu ambiente de trabalho?</li>
           </ul>
       </blockquote>
-      <h2 id="visao">Visão</h2>
+      <h2 id="visao">Definição de pronto</h2>
       <blockquote>
-         <p>Definição de pronto: uma estória de usuário é considerada finalizada uma vez que todas as funcionalidades descritas tenham sido implementadas (back, front e banco) e automaticamente testadas.</p>
+         <p>Uma estória de usuário é considerada finalizada uma vez que todas as funcionalidades descritas tenham sido implementadas (back, front e banco) e automaticamente testadas.</p>
       </blockquote>
-      <h2 id="visao">Estórias de usuário</h2>
+      <h2 id="estorias-de-usuario">Estórias de usuário</h2>
       <h4>Como cliente, eu gostaria de visualizar os sabores de pizzas disponíveis para selecionar o que eu desejar (1,0 ponto)</h4>
       <blockquote>
         Os sabores das pizzas devem estar listados em ordem alfabética.
@@ -50,8 +51,8 @@
               <p>BR é a borda recheada e possui os seguintes valores:</p>
               <ul>
                  <li>Catupiry = R$5,00;</li>
-                 <li>Chocolate = R$6,00</li>
-                 <li>Cheddar = R$7,00;</li>
+                 <li>Chocolate = R$6,00;</li>
+                 <li>Cheddar = R$7,00.</li>
               </ul>
            </li>
            <li><p>TE é a taxa de entrega e possui o valor de R$10,00;</p></li>
@@ -70,7 +71,7 @@
         <ul>
          <li>O tempo previsto de entrega deve ser um número aleatório entre 20 e 60 minutos;</li>
          <li>Caso o tempo de entrega seja maior do que 40 minutos, um desconto de 10% deve ser aplicado ao preço final.</li>
-      </ul>
+        </ul>
       </blockquote>
       
       <h2 id="requisitos-nao-funcionais">Requisitos não-funcionais</h2>
@@ -90,39 +91,36 @@
       <ul>
          <li>
            [GET]/ingredientes - Retorna todos os ingredientes.
-           <code>
             <pre>
 [  
-   {  
+   {
       "id":1,
       "ingrediente":"Queijo mussarela",
       "preco":5
    },
-   {  
+   {
       "id":2,
       "ingrediente":"Queijo cheddar",
       "preco":7
    }
 ]
             </pre>
-           </code>
          </li>
          <li>[GET]/ingrediente/{id} - Retorna um ingrediente passando seu identificador.</li>
          <li>
            [GET]/sabores - Retorna todos os sabores.
-           <code>
-             <pre>
-[  
- {  
+            <pre>
+[
+ {
     "id":6,
     "sabor":"Milho",
-    "ingredientes":[  
-       {  
+    "ingredientes":[
+       {
           "id":1,
           "ingrediente":"Queijo mussarela",
           "preco":5
        },
-       {  
+       {
           "id":8,
           "ingrediente":"Milho",
           "preco":2
@@ -130,35 +128,30 @@
     ]
  }
 ]
-              </pre>
-           </code>
+            </pre>
          </li>
          <li>[GET]/sabor/{id} - Retorna um sabor passando seu identificador.</li>
          <li>[GET]/bordas - Retorna todos as bordas.</li>
-        <code>
-        <pre>
-[  
-   {  
+          <pre>
+[
+   {
       "id":1,
       "borda":"Catupiry",
       "valor":5
    }
 ]
-        </pre>
-        </code>
+          </pre>
          <li>[GET]/borda/{id} - Retorna uma borda passando seu identificador</li>
          <li>[GET]/tamanhos - Retorna todos os tamanhos.
-         <code>
           <pre>
-[  
-   {  
+[
+   {
       "id":1,
       "tamanho":"Pequena",
       "peso":1
    }
 ]
           </pre>
-         </code>
       </ul>
       
       <h2 id="tabelas">Tabelas</h2>
@@ -263,6 +256,7 @@
             </tr>
          </tbody>
       </table>
+      
       <table>
          <thead>
             <tr>
@@ -319,6 +313,7 @@
             </tr>
          </tbody>
       </table>
+      
       <table>
          <thead>
             <tr>
@@ -345,6 +340,7 @@
             </tr>
          </tbody>
       </table>
+      
       <table>
          <thead>
             <tr>
