@@ -86,7 +86,8 @@
          <li>Utilize <a href="https://jasmine.github.io/" target="_blank">Jasmine</a> ou <a href="http://www.protractortest.org/" target="_blank">Protractor</a> para executar os testes automatizados de acordo com a necessidade;</li>
          <li>Sua aplicação será executada na última versão do navegador Chrome.</li>
       </ol>
-      <h2 id="rotas-do-webservice">Rotas do <i>webservice</i></h2>
+      <h2 id="rotas-do-webservice">Rotas do <i>webservice</i> (http://186.215.80.43:82/api)</h2>
+      <h3></h3>
       <ul>
          <li>[GET]/ingredientes - Retorna todos os ingredientes.</li>
          <li>[GET]/ingrediente/{id} - Retorna um ingrediente passando seu identificador.</li>
