@@ -80,7 +80,7 @@
          <li>
             É obrigatório utilizar o <a href="https://git-scm.com/">Git</a> como repositório;
             <ul>
-               <li>Procure realizar <i>commits</i> logicamente relacionados, pois eles serão avaliados (1,0 ponto).</li>
+               <li>Procure realizar <i>commits</i> logicamente relacionados (<a href="https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project"><i>commit guidelines</i></a>), pois eles serão avaliados (1,0 ponto).</li>
             </ul>
          </li>
          <li>Utilize <a href="https://jasmine.github.io/">Jasmine</a> ou <a href="http://www.protractortest.org/">Protractor</a> para executar os testes automatizados de acordo com a necessidade;</li>
