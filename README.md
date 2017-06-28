@@ -7,21 +7,21 @@
       <h1 id="teste-para-candidato-front-end">Teste para candidato Front-end</h1>
       <h2 id="descricao-do-projeto">Descrição do projeto</h2>
       <blockquote>
-        <p>Queremos desenvolver uma pequena aplicação web que nos permita encomendar pizzas.</p>
+        <p>Queremos desenvolver uma pequena aplicação <i>web</i> que nos permita encomendar pizzas.</p>
       </blockquote>
       <h2 id="objetivos">Objetivos</h2>
       <blockquote>
           Nosso objetivo é encontrar respostas para as seguintes perguntas:
           <ul>
-            <li>Você compreende a linguagem Javascript e tecnologias web em geral?
-            <li>Você pode julgar qual biblioteca/framework/plugin melhor se encaixa em determinada situação e consegue usá-lo corretamente?</li>
+            <li>Você compreende a linguagem Javascript e tecnologias <i>web</i> em geral?
+            <li>Você pode julgar qual biblioteca/<i>framework</i>/<i>plugin</i> melhor se encaixa em determinada situação e consegue usá-lo corretamente?</li>
             <li>Você pode criar interfaces claras e fáceis de usar?</li>
             <li>Você domina seu ambiente de trabalho?</li>
           </ul>
       </blockquote>
       <h2 id="visao">Definição de pronto</h2>
       <blockquote>
-         <p>Uma estória de usuário é considerada finalizada uma vez que todas as funcionalidades descritas tenham sido implementadas (back, front e banco) e automaticamente testadas.</p>
+         <p>Uma estória de usuário é considerada finalizada uma vez que todas as funcionalidades descritas tenham sido implementadas (<i>back-end</i> e <i>front-end</i>) e automaticamente testadas.</p>
       </blockquote>
       <h2 id="estorias-de-usuario">Estórias de usuário</h2>
       <h4>Como cliente, eu gostaria de visualizar os sabores de pizzas disponíveis para selecionar o que eu desejar (1,0 ponto)</h4>
@@ -32,8 +32,16 @@
       <blockquote>
         <p>A montagem da pizza deve seguir o seguinte fluxo: seleção dos ingredientes, borda recheada e tamanho da pizza;</p>
         <p>Os ingredientes devem ser listados em ordem alfabética;</p>
-        <p>Deve haver os seguintes tipos de borda: catupiry ou cheddar;</p>
+        <p>Deve haver os seguintes tipos de borda: catupiry, chocolate ou cheddar;</p>
         <p>Deve haver os seguintes tamanhos: pequena, média ou grande.</p>
+      </blockquote>
+      <h4>Como cliente, eu gostaria de finalizar o meu pedido e ser imediatamente informado sobre o tempo previsto de entrega (2,0 pontos)</h4>
+      <blockquote>
+        <p>Deve haver um botão para finalizar o pedido.</p>
+        <ul>
+         <li>O tempo previsto de entrega deve ser um número aleatório entre 20 e 60 minutos;</li>
+         <li>Caso o tempo de entrega seja maior do que 40 minutos, um desconto de 10% deve ser aplicado ao preço final.</li>
+        </ul>
       </blockquote>
       <h4>Como cliente, eu gostaria de visualizar o preço final do meu pedido de acordo com o sabor e o tamanho selecionados ou com os ingredientes e o tamanho selecionados (3,0 pontos)</h4>
       <blockquote>
@@ -42,9 +50,9 @@
            <li>
               <p>TP é o tamanho da pizza e possui os seguintes valores:</p>
               <ul>
-                 <li>Pizza pequena = 1;</li>
-                 <li>Pizza média = 1,2;</li>
-                 <li>Pizza grande = 1.5.</li>
+                 <li>Pizza pequena = 1,00;</li>
+                 <li>Pizza média = 1,20;</li>
+                 <li>Pizza grande = 1,50.</li>
               </ul>
            </li>
            <li>
@@ -59,32 +67,24 @@
            <li>
               <p>DE é o desconto por atraso e possui os seguintes valores:</p>
               <ul>
-                 <li>1 para tempos de entrega menor ou igual a 40 minutos;</li>
+                 <li>1,00 para tempos de entrega menor ou igual a 40 minutos;</li>
                  <li>0,90 para tempos de entrega maior do que 40 minutos.</li>
               </ul>
            </li>
         </ol>
       </blockquote>
-      <h4>Como cliente, eu gostaria de finalizar o meu pedido e ser imediatamente informado sobre o tempo previsto de entrega (2,0 pontos)</h4>
-      <blockquote>
-        <p>Deve haver um botão para finalizar o pedido.</p>
-        <ul>
-         <li>O tempo previsto de entrega deve ser um número aleatório entre 20 e 60 minutos;</li>
-         <li>Caso o tempo de entrega seja maior do que 40 minutos, um desconto de 10% deve ser aplicado ao preço final.</li>
-        </ul>
-      </blockquote>
       <h2 id="requisitos-nao-funcionais">Requisitos não-funcionais</h2>
       <ol>
-         <li>A aplicação deve ser <i>Single Page Application (SPA)</i> e <i>JS-based</i> utilizando <a href="#">AngularJS 1</a> e <a href="#">Bootstrap</a>;</li>
+         <li>A aplicação deve ser <i>Single Page Application (SPA)</i> e <i>JS-based</i> utilizando <a href="https://angularjs.org/" target="_blank">AngularJS 1</a> e <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>;</li>
          <li>Utilize quaisquer bibliotecas, <i>frameworks</i> ou <i>plugins</i> que você julgar adequados;</li>
          <li>
-            É obrigatório utilizar o Git como repositório;
+            É obrigatório utilizar o <a href="https://git-scm.com/" target="_blank">Git</a> como repositório;
             <ul>
-               <li>Procure realizar commits logicamente relacionados, pois eles serão avaliados (1,0 ponto).</li>
+               <li>Procure realizar <i>commits</i> logicamente relacionados (<a href="https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project" target="_blank"><i>commit guidelines</i></a>), pois eles serão avaliados (1,0 ponto).</li>
             </ul>
          </li>
-         <li>Utilize Jasmine ou Protractor para executar os testes automatizados de acordo com a necessidade;</li>
-         <li>Foque seu desenvolvimento na versão do Chrome instalada.</li>
+         <li>Utilize <a href="https://jasmine.github.io/" target="_blank">Jasmine</a> ou <a href="http://www.protractortest.org/" target="_blank">Protractor</a> para executar os testes automatizados de acordo com a necessidade;</li>
+         <li>Sua aplicação será executada na última versão do navegador Chrome.</li>
       </ol>
       <h2 id="rotas-do-webservice">Rotas do <i>webservice</i></h2>
       <ul>
@@ -110,7 +110,7 @@
       </ul>
       <h2 id="tabelas">Tabelas</h2>
       <table>
-         <thead>
+         <thead style="background-color:lightgrey">
             <tr>
                <th>id</th>
                <th>Ingredientes</th>
@@ -211,7 +211,7 @@
          </tbody>
       </table>
       <table>
-         <thead>
+         <thead style="background-color:lightgrey">
             <tr>
                <th>id</th>
                <th>Sabores</th>
@@ -267,7 +267,7 @@
          </tbody>
       </table>
       <table>
-         <thead>
+         <thead style="background-color:lightgrey">
             <tr>
                <th>id</th>
                <th>Tamanho</th>
@@ -293,7 +293,7 @@
          </tbody>
       </table>
       <table>
-         <thead>
+         <thead style="background-color:lightgrey">
             <tr>
                <th>id</th>
                <th>Borda</th>
