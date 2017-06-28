@@ -84,7 +84,8 @@
             </ul>
          </li>
          <li>Utilize <a href="https://jasmine.github.io/" target="_blank">Jasmine</a> ou <a href="http://www.protractortest.org/" target="_blank">Protractor</a> para executar os testes automatizados de acordo com a necessidade;</li>
-         <li>Sua aplicação será executada na última versão do navegador Chrome.</li>
+         <li>Sua aplicação será executada na última versão do navegador Chrome;</li>
+         <li>Ao finalizar, submeta o <a href="https://git-scm.com/docs/git-request-pull" target="_blank"><i>pull request</i></a>.</li>
       </ol>
       <h2 id="rotas-do-webservice">Rotas do <i>webservice</i> (http://186.215.80.43:82/api)</h2>
       <h3></h3>
