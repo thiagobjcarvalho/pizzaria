@@ -75,15 +75,15 @@
       </blockquote>
       <h2 id="requisitos-nao-funcionais">Requisitos não-funcionais</h2>
       <ol>
-         <li>A aplicação deve ser <i>Single Page Application (SPA)</i> e <i>JS-based</i> utilizando <a href="https://angularjs.org/">AngularJS 1</a> e <a href="http://getbootstrap.com/">Bootstrap</a>;</li>
+         <li>A aplicação deve ser <i>Single Page Application (SPA)</i> e <i>JS-based</i> utilizando <a href="https://angularjs.org/" target="_blank">AngularJS 1</a> e <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>;</li>
          <li>Utilize quaisquer bibliotecas, <i>frameworks</i> ou <i>plugins</i> que você julgar adequados;</li>
          <li>
-            É obrigatório utilizar o <a href="https://git-scm.com/">Git</a> como repositório;
+            É obrigatório utilizar o <a href="https://git-scm.com/" target="_blank">Git</a> como repositório;
             <ul>
-               <li>Procure realizar <i>commits</i> logicamente relacionados (<a href="https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project"><i>commit guidelines</i></a>), pois eles serão avaliados (1,0 ponto).</li>
+               <li>Procure realizar <i>commits</i> logicamente relacionados (<a href="https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project" target="_blank"><i>commit guidelines</i></a>), pois eles serão avaliados (1,0 ponto).</li>
             </ul>
          </li>
-         <li>Utilize <a href="https://jasmine.github.io/">Jasmine</a> ou <a href="http://www.protractortest.org/">Protractor</a> para executar os testes automatizados de acordo com a necessidade;</li>
+         <li>Utilize <a href="https://jasmine.github.io/" target="_blank">Jasmine</a> ou <a href="http://www.protractortest.org/" target="_blank">Protractor</a> para executar os testes automatizados de acordo com a necessidade;</li>
          <li>Sua aplicação será executada na última versão do navegador Chrome.</li>
       </ol>
       <h2 id="rotas-do-webservice">Rotas do <i>webservice</i></h2>
