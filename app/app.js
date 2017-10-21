@@ -7,7 +7,9 @@ angular.module('app', [
     config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
 
-
+        $routeProvider.when('/', {
+            templateUrl: '/views/principal.html'
+        });
 
         $routeProvider.otherwise({redirectTo: '/'});
 
