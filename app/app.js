@@ -8,7 +8,8 @@ angular.module('app', [
         $locationProvider.hashPrefix('!');
 
         $routeProvider.when('/', {
-            templateUrl: '/views/principal.html'
+            templateUrl: '/views/principal.html',
+            controller: 'PizzaController'
         });
 
         $routeProvider.otherwise({redirectTo: '/'});
