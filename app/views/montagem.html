@@ -1,0 +1,60 @@
+<div ng-controller="MontagemController as Montagem" ng-init="Montagem.listarTudo( )">
+    <div class="container">
+        <h2>Monte sua Pizza</h2>
+        <form>
+            <div class="row form-group">
+                <legend>Pizza</legend>
+                <div>
+                    <select ng-model="Montagem.pedido.sabor" ng-change="Montagem.selecionarPizza()">
+                        <option value="">Escolha o Sabor da Pizza</option>
+                        <option ng-repeat="pizza in Montagem.sabores" value="{{pizza.id}}"
+                                ng-bind="pizza.sabor"></option>
+                    </select>
+                    <div class="ingredientes" ng-show="Montagem.pizzaSelecionada">
+                        <span ng-repeat-start="ingrediente in Montagem.pizzaSelecionada.ingredientes"
+                                ng-bind="ingrediente.ingrediente"></span><span ng-repeat-end ng-hide="$last">, </span>
+                    </div>
+                </div>
+            </div>
+            <!--<div ng-bind="Montagem.ingredientesSelecionados | json"></div>-->
+            <div class="row form-group">
+                <legend>Adicione Ingredientes</legend>
+                <div>
+                    <div class="form-check" ng-repeat="ingrediente in Montagem.ingredientes | orderBy: 'ingrediente'">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="{{ingrediente.id}}"
+                                   ng-checked="Montagem.ingredientesSelecionados.indexOf(ingrediente.id) >= 0"
+                                   ng-click="Montagem.trocarIngrediente(ingrediente)">
+                            <span ng-bind="ingrediente.ingrediente"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <legend>Borda</legend>
+                <div>
+                    <select ng-model="Montagem.pedido.borda">
+                        <option value="0">Sem Borda</option>
+                        <option ng-repeat="borda in Montagem.bordas" value="{{borda.id}}"
+                                ng-bind="borda.borda"></option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="row form-group">
+                <legend>Tamanho</legend>
+                <div>
+                    <select ng-model="Montagem.pedido.tamanho">
+                        <option value="">Escolha o Tamanho da Pizza</option>
+                        <option ng-repeat="tamanho in Montagem.tamanhos" value="{{tamanho.id}}"
+                                ng-bind="tamanho.tamanho"></option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

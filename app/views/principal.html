@@ -9,7 +9,7 @@
         <div class="col-lg-4 paddind-sabores" ng-repeat="pizza in Pizza.sabores | orderBy: 'sabor'">
 
             <!-- Nome do sabor -->
-            <a class="sabor-color" href="#!/tradicional/{{pizza.id}}">
+            <a class="sabor-color" href="#!/monte-sua-pizza?sabor={{pizza.id}}">
                 <h5 ng-bind="pizza.sabor"></h5>
             </a>
 
@@ -18,7 +18,7 @@
             </span><span ng-repeat-end ng-if="!$last">, </span><br>
 
             <!--Envio do Id para rota 'tradicional'-->
-            <a class="btn btn-outline-secondary btn-sm" href="/#!/tradicional/{{pizza.id}}" role="button">Selecionar &raquo;</a>
+            <a class="btn btn-outline-secondary btn-sm" href="#!/monte-sua-pizza?sabor={{pizza.id}}" role="button">Comprar &raquo;</a>
             <br>
         </div>
     </div>
