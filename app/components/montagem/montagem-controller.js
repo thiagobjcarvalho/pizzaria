@@ -40,6 +40,8 @@
          */
         vm.tamanhos = [];
 
+        vm.total = null;
+
         vm.listarTudo = function () {
             var promises = [
                 Pizza.getSabores(),
@@ -93,6 +95,75 @@
                 vm.ingredientesSelecionados.splice(index, 1);
             }
         };
+
+        vm.calcularTempoDeEntrega = function () {
+            if (!vm.tempoDeEntrega) {
+                vm.tempoDeEntrega = Math.floor(Math.random() * ((60 - 20) + 1) + 20);
+            }
+        };
+
+        vm.calcularValorFinal = function () {
+            vm.calcularTempoDeEntrega();
+            var pizza = calcularValorDaPizza();
+            // 1 - Calcular o valor da pizza
+            // 2 - Entrega
+            // 3 - Total
+
+            var borda = getBorda(vm.pedido.borda);
+
+            var total = pizza + borda.valor + 10;
+
+            vm.total = {
+                pizza: pizza,
+                borda: borda.valor,
+                entrega: 10,
+                total: vm.tempoDeEntrega > 40 ? total * 0.9 : total
+            }
+        };
+
+        function getIngrediente(id) {
+            for (var i = 0; i < vm.ingredientes.length; i++) {
+                var ing = vm.ingredientes[i];
+                if (ing.id == id) {
+                    return ing;
+                }
+            }
+        }
+
+        function getTamanho(id) {
+            for (var i = 0; i < vm.tamanhos.length; i++) {
+                var objTamanho = vm.tamanhos[i];
+                if (objTamanho.id == id) {
+                    return objTamanho;
+                }
+            }
+        }
+
+        function getBorda(id) {
+            if (id == "0") {
+                return {valor: 0}
+            }
+
+            for (var i = 0; i < vm.bordas.length; i++) {
+                var objBorda = vm.bordas[i];
+                if (objBorda.id == id) {
+                    return objBorda;
+                }
+            }
+        }
+
+        function calcularValorDaPizza() {
+            var totalIngredientes = vm.ingredientesSelecionados.reduce(function(valorAnterior, idIngrediente){
+                var ing = getIngrediente(idIngrediente);
+                return valorAnterior + ing.preco;
+            }, 0);
+
+
+            var tamanho = getTamanho(vm.pedido.tamanho);
+            var valorFinal = totalIngredientes * tamanho.peso;
+
+            return valorFinal;
+        }
     }
 
     angular.module('app')

@@ -1,4 +1,4 @@
-<div ng-controller="MontagemController as Montagem" ng-init="Montagem.listarTudo( )">
+<div ng-controller="MontagemController as Montagem" ng-init="Montagem.listarTudo(); Montagem.calcularTempoDeEntrega();">
     <div class="container">
         <h2>Monte sua Pizza</h2>
         <form>
@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div>
-            <!--<div ng-bind="Montagem.ingredientesSelecionados | json"></div>-->
+            <div ng-bind="Montagem.ingredientesSelecionados | json"></div>
             <div class="row form-group">
                 <legend>Adicione Ingredientes</legend>
                 <div>
@@ -24,7 +24,7 @@
                         <label class="form-check-label">
                             <input type="checkbox" class="form-check-input" value="{{ingrediente.id}}"
                                    ng-checked="Montagem.ingredientesSelecionados.indexOf(ingrediente.id) >= 0"
-                                   ng-click="Montagem.trocarIngrediente(ingrediente)">
+                                   ng-click="Montagem.trocarIngrediente(ingrediente); Montagem.calcularValorFinal()">
                             <span ng-bind="ingrediente.ingrediente"></span>
                         </label>
                     </div>
@@ -34,7 +34,7 @@
             <div class="row form-group">
                 <legend>Borda</legend>
                 <div>
-                    <select ng-model="Montagem.pedido.borda">
+                    <select ng-model="Montagem.pedido.borda" ng-change="Montagem.calcularValorFinal()">
                         <option value="0">Sem Borda</option>
                         <option ng-repeat="borda in Montagem.bordas" value="{{borda.id}}"
                                 ng-bind="borda.borda"></option>
@@ -46,13 +46,27 @@
             <div class="row form-group">
                 <legend>Tamanho</legend>
                 <div>
-                    <select ng-model="Montagem.pedido.tamanho">
+                    <select ng-model="Montagem.pedido.tamanho" ng-change="Montagem.calcularValorFinal()">
                         <option value="">Escolha o Tamanho da Pizza</option>
                         <option ng-repeat="tamanho in Montagem.tamanhos" value="{{tamanho.id}}"
                                 ng-bind="tamanho.tamanho"></option>
                     </select>
                 </div>
             </div>
+
+
+            <pre ng-show="Montagem.total" ng-bind="Montagem.total | json"></pre>
+
+            <h2 ng-show="Montagem.total">
+                Valor Total:
+                R$ <span ng-bind="Montagem.total.total | number:2"></span>
+            </h2>
+            <h2>
+                Tempo previso de Entrega:
+                <span ng-bind="Montagem.tempoDeEntrega"></span> minutos
+            </h2>
+
+
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
