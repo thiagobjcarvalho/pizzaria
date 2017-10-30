@@ -13,13 +13,30 @@
 
         vm.pizzaSelecionada = null;
 
+        /**
+         * Lista de Ingredientes selecionados
+         * @type {Array}
+         */
         vm.ingredientesSelecionados = [];
 
+        /**
+         * Lista do pedido da pizza
+         * @type {Array}
+         */
         vm.pedido = {
             borda: "0"
         };
 
+        /**
+         * Lista do sabor da pizza
+         * @type {Array}
+         */
         vm.sabor = [];
+
+        /**
+         * Lista de sabores da Pizza
+         * @type {Array}
+         */
         vm.sabores = [];
 
         /**
@@ -40,8 +57,16 @@
          */
         vm.tamanhos = [];
 
+        /**
+         * Total da Pizza
+         * @type {null}
+         */
         vm.total = null;
 
+        /**
+         * Método para listar todos os serviços de pizza
+         * @returns {*}
+         */
         vm.listarTudo = function () {
             var promises = [
                 Pizza.getSabores(),
@@ -62,11 +87,12 @@
                     }
 
                     vm.selecionarPizza();
-                }, function () {
-                    // @todo tratamento de erro
                 })
         };
 
+        /**
+         * Função para seleção de Pizza
+         */
         vm.selecionarPizza = function () {
             if (!vm.pedido.sabor) {
                 vm.pizzaSelecionada = null;
@@ -87,6 +113,10 @@
 
         };
 
+        /**
+         * Função paratroca de ingredientes
+         * @param ingrediente
+         */
         vm.trocarIngrediente = function (ingrediente) {
             var index = vm.ingredientesSelecionados.indexOf(ingrediente.id);
             if (index === -1) {
@@ -96,18 +126,21 @@
             }
         };
 
+        /**
+         * Função paracalcular o tempo de entrega
+         */
         vm.calcularTempoDeEntrega = function () {
             if (!vm.tempoDeEntrega) {
                 vm.tempoDeEntrega = Math.floor(Math.random() * ((60 - 20) + 1) + 20);
             }
         };
 
+        /**
+         * Função paracalcular o valor final da pizza
+         */
         vm.calcularValorFinal = function () {
             vm.calcularTempoDeEntrega();
             var pizza = calcularValorDaPizza();
-            // 1 - Calcular o valor da pizza
-            // 2 - Entrega
-            // 3 - Total
 
             var borda = getBorda(vm.pedido.borda);
 
@@ -121,6 +154,11 @@
             }
         };
 
+        /**
+         * Função para buscar os ingredientes
+         * @param id
+         * @returns {*}
+         */
         function getIngrediente(id) {
             for (var i = 0; i < vm.ingredientes.length; i++) {
                 var ing = vm.ingredientes[i];
@@ -130,6 +168,11 @@
             }
         }
 
+        /**
+         * Função para burcar o tamanho
+         * @param id
+         * @returns {*}
+         */
         function getTamanho(id) {
             for (var i = 0; i < vm.tamanhos.length; i++) {
                 var objTamanho = vm.tamanhos[i];
@@ -139,6 +182,11 @@
             }
         }
 
+        /**
+         * Função para buscar a borda
+         * @param id
+         * @returns {*}
+         */
         function getBorda(id) {
             if (id == "0") {
                 return {valor: 0}
@@ -152,6 +200,10 @@
             }
         }
 
+        /**
+         * Método para calcular o valor da pizza
+         * @returns {number}
+         */
         function calcularValorDaPizza() {
             var totalIngredientes = vm.ingredientesSelecionados.reduce(function(valorAnterior, idIngrediente){
                 var ing = getIngrediente(idIngrediente);

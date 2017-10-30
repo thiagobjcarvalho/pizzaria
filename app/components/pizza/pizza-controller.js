@@ -18,10 +18,6 @@
             return $http.get(baseUrl + '/sabores');
         };
 
-        self.getSabor = function (id) {
-            return $http.get(baseUrl + '/sabor' + ':id');
-        };
-
         /**
          * Faz a chamada pro serviço e retorna uma Promise
          * @name Pizza.getIngredientes
@@ -53,7 +49,7 @@
     /**
      * Controller responsavel por mostrar as informações de pizzas
      */
-    function PizzaController(Pizza, $route) {
+    function PizzaController(Pizza) {
 
         /**
          * ViewModel
@@ -76,9 +72,6 @@
                 .then(function(result) {
                     // callback de successo
                     vm.sabores = result.data;
-                }, function() {
-                    // callback de erro
-                    // @todo Realizar tratamento de erro
                 });
         };
 
@@ -91,9 +84,6 @@
                 .then(function(result) {
                     // callback de successo
                     vm.Ingredientes = result.data;
-                }, function() {
-                    // callback de erro
-                    // @todo Realizar tratamento de erro
                 });
         };
 
@@ -106,9 +96,6 @@
                 .then(function(result) {
                     // callback de successo
                     vm.bordas = result.data;
-                }, function() {
-                    // callback de erro
-                    // @todo Realizar tratamento de erro
                 });
         };
 
@@ -121,9 +108,6 @@
                 .then(function(result) {
                     // callback de successo
                     vm.tamanhos = result.data;
-                }, function() {
-                    // callback de erro
-                    // @todo Realizar tratamento de erro
                 });
         };
     }
