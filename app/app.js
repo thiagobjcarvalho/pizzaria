@@ -11,13 +11,10 @@ angular.module('app', [
             templateUrl: '/views/principal.html',
             controller: 'PizzaController'
         });
-        $routeProvider.when('/tradicional/:id', {
-            templateUrl: '/views/tradicional.html',
-            controller: 'PizzaController'
-        });
-        $routeProvider.when('/montada', {
-            templateUrl: '/views/montada.html',
-            controller: 'PizzaController'
+
+        $routeProvider.when('/monte-sua-pizza', {
+            templateUrl: '/views/montagem.html',
+            controller: 'MontagemController'
         });
 
         $routeProvider.otherwise({redirectTo: '/'});

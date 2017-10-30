@@ -31,3 +31,9 @@
     padding-top: 25px;
     padding-bottom: 15px;
 }
+.form-check-pizzaria {
+    display: inline-block;
+}
+.padding-msg{
+    padding-top: 25px;
+}

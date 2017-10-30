@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="assets/css/pizzaria.css">
     <link rel="stylesheet" href="app.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-    <script src="assets/js/bootstrap.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 </head>
 
 <body>
@@ -38,11 +39,11 @@
             <li class="nav-item">
                 <a class="nav-link active disabled sabor-color" href="/">Home</a>
             </li>
+            <!--<li class="nav-item">-->
+                <!--<a class="nav-link sabor-color" href="/#!/tradicional">Tradicionais</a>-->
+            <!--</li>-->
             <li class="nav-item">
-                <a class="nav-link sabor-color" href="/#!/tradicional">Tradicionais</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link sabor-color" href="/#!/montada">Monte sua Pizza</a>
+                <a class="nav-link sabor-color" href="/#!/monte-sua-pizza">Monte sua Pizza</a>
             </li>
         </ul>
     </div>
@@ -67,5 +68,6 @@
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>
 <script src="components/pizza/pizza-controller.js"></script>
+<script src="components/montagem/montagem-controller.js"></script>
 </body>
 </html>

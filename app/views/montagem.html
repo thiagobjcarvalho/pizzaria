@@ -1,0 +1,100 @@
+<div ng-controller="MontagemController as Montagem" ng-init="Montagem.listarTudo(); Montagem.calcularTempoDeEntrega();">
+
+    <h2>Monte sua Pizza</h2>
+
+    <form>
+
+        <div class="card">
+            <div class="container">
+                <div class="card-body">
+                    <div class="row float-right">
+                        <h5>
+                            Tempo previso de Entrega:
+                            <span ng-bind="Montagem.tempoDeEntrega"></span> minutos
+                        </h5>
+                    </div>
+                    <div class="form-group col-6">
+                        <legend>Pizza</legend>
+                        <div>
+                            <select class="form-control"
+                                    ng-model="Montagem.pedido.sabor"
+                                    ng-change="Montagem.selecionarPizza(); Montagem.calcularValorFinal()">
+                                <option value="">Escolha o Sabor da Pizza</option>
+                                <option ng-repeat="pizza in Montagem.sabores" value="{{pizza.id}}"
+                                        ng-bind="pizza.sabor"></option>
+                            </select>
+
+                            <div class="ingredientes" ng-show="Montagem.pizzaSelecionada">
+                        <span ng-repeat-start="ingrediente in Montagem.pizzaSelecionada.ingredientes"
+                              ng-bind="ingrediente.ingrediente"></span><span ng-repeat-end ng-hide="$last">, </span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group col-12">
+                        <legend>Adicione Ingredientes</legend>
+                        <div class="form-control">
+                            <span class="form-check col-4 form-check-pizzaria"
+                                  ng-repeat="ingrediente in Montagem.ingredientes | orderBy: 'ingrediente'">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="{{ingrediente.id}}"
+                                           ng-checked="Montagem.ingredientesSelecionados.indexOf(ingrediente.id) >= 0"
+                                           ng-click="Montagem.trocarIngrediente(ingrediente); Montagem.calcularValorFinal()">
+                                    <span ng-bind="ingrediente.ingrediente"></span>
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <legend>Borda</legend>
+                        <div>
+                            <select class="form-control"
+                                    ng-model="Montagem.pedido.borda" ng-change="Montagem.calcularValorFinal()">
+                                <option value="0">Sem Borda</option>
+                                <option ng-repeat="borda in Montagem.bordas" value="{{borda.id}}"
+                                        ng-bind="borda.borda"></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <legend>Tamanho</legend>
+                        <div>
+                            <select class="form-control"
+                                    ng-model="Montagem.pedido.tamanho" ng-change="Montagem.calcularValorFinal()">
+                                <option value="">Escolha o Tamanho da Pizza</option>
+                                <option ng-repeat="tamanho in Montagem.tamanhos" value="{{tamanho.id}}"
+                                        ng-bind="tamanho.tamanho"></option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr/>
+                    <h4 ng-show="Montagem.total">
+                        Prévia do Valor Total:
+                        R$ <span ng-bind="Montagem.total.total | number:2"></span>
+                    </h4>
+
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="container">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-4 padding-msg">
+                            <button type="submit" class="btn btn-primary"
+                                    ng-disabled="!Montagem.pedido.tamanho || !Montagem.pedido.borda"
+                                    ng-click="Montagem.msg = true">Finalizar Pedido
+                            </button>
+                        </div>
+                        <div ng-show="Montagem.msg" class="alert alert-success" role="alert">
+                            <h5 class="alert-heading">Pedido Finalizado!</h5><h6>Aguarde a entrega no local
+                            solicitado.</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </form>
+</div>
