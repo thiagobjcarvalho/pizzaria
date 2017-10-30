@@ -63,6 +63,8 @@
          */
         vm.total = null;
 
+        vm.msg = null;
+
         /**
          * Método para listar todos os serviços de pizza
          * @returns {*}

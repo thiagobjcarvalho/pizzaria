@@ -2,24 +2,31 @@
     <!--Titulo-->
     <h2>Sabores</h2>
 
-    <!--Instancia da controller Pizza-->
-    <div class="row" ng-init="Pizza.listarSabores()">
+    <div class="card">
+        <div class="card-body">
 
-        <!-- Faz a repetição dos sabores de pizza -->
-        <div class="col-lg-4 paddind-sabores" ng-repeat="pizza in Pizza.sabores | orderBy: 'sabor'">
 
-            <!-- Nome do sabor -->
-            <a class="sabor-color" href="#!/monte-sua-pizza?sabor={{pizza.id}}">
-                <h5 ng-bind="pizza.sabor"></h5>
-            </a>
+            <!--Instancia da controller Pizza-->
+            <div class="row" ng-init="Pizza.listarSabores()">
 
-            <!--Lista de Ingredientes-->
+                <!-- Faz a repetição dos sabores de pizza -->
+                <div class="col-lg-4 paddind-sabores" ng-repeat="pizza in Pizza.sabores | orderBy: 'sabor'">
+
+                    <!-- Nome do sabor -->
+                    <a class="sabor-color" href="#!/monte-sua-pizza?sabor={{pizza.id}}">
+                        <h5 ng-bind="pizza.sabor"></h5>
+                    </a>
+
+                    <!--Lista de Ingredientes-->
             <span ng-repeat-start="ingrediente in pizza.ingredientes" ng-bind="ingrediente.ingrediente">
             </span><span ng-repeat-end ng-if="!$last">, </span><br>
 
-            <!--Envio do Id para rota 'tradicional'-->
-            <a class="btn btn-outline-secondary btn-sm" href="#!/monte-sua-pizza?sabor={{pizza.id}}" role="button">Comprar &raquo;</a>
-            <br>
+                    <!--Envio do Id para rota 'tradicional'-->
+                    <a class="btn btn-outline-secondary btn-sm" href="#!/monte-sua-pizza?sabor={{pizza.id}}"
+                       role="button">Comprar &raquo;</a>
+                    <br>
+                </div>
+            </div>
         </div>
     </div>
 </div>
